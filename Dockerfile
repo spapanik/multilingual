@@ -7,7 +7,7 @@ RUN groupadd --gid 1000 ${PYTHON_USER} && \
     echo "${PYTHON_USER} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
     dnf makecache --refresh && \
     dnf --assumeyes --nodocs --setopt install_weak_deps=False install \
-    git gcc gcc-fortran gmp python python-devel pipx java-latest-openjdk java-latest-openjdk-devel rustup && \
+    git gcc gcc-fortran gmp gmp-devel python python-devel pipx java-latest-openjdk java-latest-openjdk-devel rustup && \
     dnf --assumeyes clean all
 
 USER ${PYTHON_USER}
