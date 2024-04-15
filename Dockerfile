@@ -7,7 +7,7 @@ RUN groupadd --gid 1000 ${PYTHON_USER} && \
     echo "${PYTHON_USER} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
     dnf makecache --refresh && \
     dnf --assumeyes --nodocs --setopt install_weak_deps=False install \
-    git gcc gcc-fortran gmp python3.12 python3.12-devel pipx java-21-openjdk java-21-openjdk rustup && \
+    git gcc gcc-fortran gmp python3.12 python3.12-devel pipx java-latest-openjdk java-latest-openjdk-devel rustup && \
     dnf --assumeyes clean all && \
     alternatives --install /usr/bin/python python /usr/bin/python3.12 1
 
