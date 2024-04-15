@@ -17,5 +17,5 @@ ENV PYTHONPYCACHEPREFIX="/home/${PYTHON_USER}/.cache/pycache/"
 
 RUN pipx install yamk==6.1.0 && \
     pipx install poetry==1.8.2 && \
-    pipx install poetry==2.1.0 && \
+    pipx install eulertools==2.1.0 && \
     rustup-init -y
