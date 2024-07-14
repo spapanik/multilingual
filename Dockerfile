@@ -11,5 +11,5 @@ USER ${PYTHON_USER}
 
 ENV PATH="/home/${PYTHON_USER}/.local/bin:/home/${PYTHON_USER}/.cargo/bin:${PATH}"
 
-RUN pipx install eulertools==4.1.0 && \
+RUN pipx install eulertools==5.0.0 && \
     rustup-init -y
