@@ -1,4 +1,4 @@
-FROM spapanik/fedora-python:1.0.0
+FROM spapanik/fedora-python:1.1.0
 
 USER root
 
