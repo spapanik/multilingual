@@ -1,0 +1,35 @@
+$globals:
+  shell: bash
+  version: "8.1"
+
+build:
+  phony: true
+  requires:
+    - build-euler-py
+    - build-euler-c
+    - build-euler-fortran
+    - build-euler-java
+    - build-euler-rust
+
+build-(?P<directory>.+):
+  phony: true
+  regex: true
+  requires:
+    - ${directory}/Dockerfile
+  commands:
+   - docker build ./${directory} -t spapanik/${directory}:${version}
+
+push:
+  phony: true
+  requires:
+    - push-euler-py
+    - push-euler-c
+    - push-euler-fortran
+    - push-euler-java
+    - push-euler-rust
+
+push-(?P<directory>.+):
+  phony: true
+  regex: true
+  commands:
+   - docker push spapanik/${directory}:${version}
