@@ -1,4 +1,4 @@
-FROM spapanik/euler-py:1.3.0-1
+FROM spapanik/euler-py:1.3.0-2
 
 USER root
 

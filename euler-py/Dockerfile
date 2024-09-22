@@ -9,4 +9,4 @@ RUN dnf makecache --refresh && \
 
 USER ${PYTHON_USER}
 
-RUN pipx install eulertools==5.1.0
+RUN pipx install eulertools==5.2.0
