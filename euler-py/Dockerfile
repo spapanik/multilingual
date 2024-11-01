@@ -9,5 +9,5 @@ RUN dnf makecache --refresh && \
 
 USER ${PYTHON_USER}
 
-RUN pipx install eulertools==5.2.0 && \
-    pipx install yq
+RUN pipx install eulertools==5.3.0 && \
+    pipx install yq==3.4.3
